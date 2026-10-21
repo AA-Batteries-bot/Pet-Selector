@@ -9,31 +9,38 @@ Scanner seasonS = new Scanner(System.in);
 System.out.println("Favorite Season?");
 String seasonInp = seasonS.nextLine().toLowerCase();
 System.out.println("Your favorite season is: " + seasonInp);
+//Idiot proofing the season line
 if (!(seasonInp.equals("fall")) && !(seasonInp.equals("summer")) && !(seasonInp.equals("winter"))  && !(seasonInp.equals("spring")))
   {
     System.out.println("Thats not a season lmao!");
         return; //exit program yet again
   }
 //This is the scanner for favorite color
-Scanner colorS = new Scanner(System.in);
 System.out.println("Favorite Color (R, G, or B): ");
-String colorInp = colorS.nextLine().toLowerCase();
+String colorInp = seasonS.nextLine().toLowerCase();
 System.out.println("Your favorite color is: " + colorInp);
+// Idiot-proofing the color line
 if (!(colorInp.equals("b")) && !(colorInp.equals("r")) && !(colorInp.equals( "g")))
  {
         System.out.println("Not a color. Remember R for red, B for blue, and G for green");
         return; //Exit program
  }
-// This is the Scanner for Name
-Scanner nameS = new Scanner(System.in);
+//Scanner line for name
 System.out.println("Whats your name? ");
-String nameInp = nameS.nextLine().toLowerCase();
+String nameInp = seasonS.nextLine().toLowerCase();
 System.out.println("Your name is: " + nameInp);
-//Idiot-proofing the scanner
+//Idiot-proofing the name line
 if ("abcdefghijklmnopqrstuvwxyz".indexOf(nameInp.substring(0,1)) ==-1) {
         System.out.println("Not a letter! Please entire a valid name");
         return; //exit program
 }  
+
+
+
+
+
+
+
 
 //Main body of code
 if ((seasonInp.equals("fall")) && (colorInp.equals("b")))
